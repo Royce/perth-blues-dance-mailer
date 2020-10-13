@@ -1,0 +1,35 @@
+{
+  "name": "perthblues-newsletter",
+  "version": "1.0.0",
+  "description": "Send an email using mdx, mjml and amazon ses.",
+  "main": "index.js",
+  "author": "Royce Townsend",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "import-jsx": "^4.0.0",
+    "mdast-util-to-string": "^1.1.0",
+    "mjml": "^4.7.1",
+    "open": "^7.3.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "remark-extract-frontmatter": "^2.0.3",
+    "remark-frontmatter": "^2.0.0",
+    "remark-sectionize": "^1.1.1",
+    "temp": "^0.9.1",
+    "unist-util-find-after": "^3.0.0",
+    "unist-util-is": "^4.0.2",
+    "unist-util-remove": "^2.0.0",
+    "unist-util-visit": "^2.0.3",
+    "unist-util-visit-parents": "^3.1.0",
+    "vfile": "^4.2.0",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.1.2"
+  }
+}
