@@ -34,7 +34,7 @@ exports.getComponents = function ({
           </mj-head>
           <mj-body background-color="#111133">
             <mj-section
-              background-url="http://191n.mj.am/img/191n/1t/h0.jpg"
+              background-url="http://perthblues.dance/static/1c8d60d8b47c69c0d0af40a45907494c/c0b28/email-header-2020-10.jpg"
               vertical-align="middle"
               background-size="cover"
               full-width="full-width"
