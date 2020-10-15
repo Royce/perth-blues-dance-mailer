@@ -45,12 +45,10 @@ exports.getComponents = function ({
                   align="right"
                   font-size="16px"
                   color="#ffffff"
-                  padding-bottom="10px"
-                  padding-top="45px"
+                  padding-bottom="30px"
+                  padding-top="25px"
                 >
-                  <span style={{ fontSize: "30px", lineHeight: "30px" }}>
-                    {title}
-                  </span>
+                  <span style="font-size:30px;line-height:30px">{title}</span>
                   <br />
                   <br />
                   {subtitle}
