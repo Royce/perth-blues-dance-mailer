@@ -15,6 +15,9 @@ const fs = require("fs");
 const open = require("open");
 const temp = require("temp").track();
 const mjml2html = require("mjml");
+const nodemailer = require("nodemailer");
+const aws = require("aws-sdk");
+aws.config.region = "ap-southeast-2";
 
 const { getComponents } = require("import-jsx")("./src/template");
 
@@ -35,6 +38,39 @@ const { getComponents } = require("import-jsx")("./src/template");
   const html = mjml2html(mjml).html;
   // console.log(html);
   await writeTempAndOpen(html, { suffix: ".html" }, ["google chrome"]);
+
+  const transporter = nodemailer.createTransport({
+    SES: new aws.SES({ apiVersion: "2010-12-01" }),
+  });
+
+  // Requires SES roles.
+  // {
+  //   "Statement": [
+  //       {
+  //           "Effect": "Allow",
+  //           "Action": "ses:SendRawEmail",
+  //           "Resource": "*"
+  //       }
+  //   ]
+  // }
+  transporter.sendMail(
+    {
+      from: "career@roycetownsend.com",
+      to: "test@roycetownsend.com",
+      subject: "Test Message",
+      html: html,
+      text: mdx,
+    },
+    (err, info) => {
+      if (err) {
+        console.log(err);
+      }
+      if (info) {
+        console.log(info.envelope);
+        console.log(info.messageId);
+      }
+    }
+  );
 })();
 
 function extractFrontmatter() {
