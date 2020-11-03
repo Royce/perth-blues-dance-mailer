@@ -48,7 +48,9 @@ exports.getComponents = function ({
                   padding-bottom="30px"
                   padding-top="25px"
                 >
-                  <span style="font-size:30px;line-height:30px">{title}</span>
+                  <span style={{ fontSize: "30px", lineHeight: "30px" }}>
+                    {title}
+                  </span>
                   <br />
                   <br />
                   {subtitle}
