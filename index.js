@@ -37,7 +37,7 @@ const { getComponents } = require("import-jsx")("./src/template");
 
   const html = mjml2html(mjml).html;
   // console.log(html);
-  await writeTempAndOpen(html, { suffix: ".html" }, ["google chrome"]);
+  await writeTempAndOpen(html, { suffix: ".html" }, ["brave browser"]);
 
   const transporter = nodemailer.createTransport({
     SES: new aws.SES({ apiVersion: "2010-12-01" }),
